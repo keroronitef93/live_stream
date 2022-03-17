@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camera</title>
+    <link href="{{url_for('static',filename='css/reset.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/camera_icon.png')}}">
+</head>
+<body>
+    <header>
+        <div class="header_list">
+            <h3 class="header_list--title">ライブ映像</h3>
+        </div>
+    </header>
+    <main>
+        <div class="main_contents">
+            <img src="{{ url_for('video') }}" class="main_contents--live">
+            <p id="date" class="main_contents--date"></p>
+        </div>
+    </main>
+    <script src="{{url_for('static',filename='js/index.js')}}"></script>
+</body>
+</html>
